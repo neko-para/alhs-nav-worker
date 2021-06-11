@@ -126,7 +126,7 @@ async function handleRequest(request) {
 		<meta charset="UTF-8">
 		<link rel="icon" href="${root}/32.png">
 		<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
-		<link href="${root}/style.css" rel="stylesheet">
+		<link href="${root}/core.css" rel="stylesheet">
 	</head>
 	
 	<body>
