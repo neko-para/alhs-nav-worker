@@ -1,11 +1,7 @@
+const root = "https://cdn.jsdelivr.net/gh/neko-para/alhs-nav-worker@1.0.1"
 
-addEventListener("fetch", event => {
-	event.respondWith(handleRequest(event.request))
-})
-
-root = "https://cdn.jsdelivr.net/gh/neko-para/alhs-nav-worker@1.0.0"
-
-info = JSON.parse(`{
+const info = 
+{
     "announce": [
         {
             "content": "文豪试炼四期–周年站庆大赛：\n\n参赛要求：\n①字数3000+\n②必须本人原创\n③参赛文章需要至少要有以下三个标签中的一个（即文中要出现相关情节或物品）\n#SΜ   #扶她    #工口饰品\n④禁止赌毒政内容!\n\n征稿相关：\n\n本活动征稿均使用cc-BY-NC-SA4.0协议\n单作者仅限一篇作品参赛\n\n#0投稿时间：6月15日-6月30日\n比赛时间：7月1日-7月15日\n（在#0投稿时间投稿的参赛文章会在比赛第一天统一发布。推荐）\n\n本活动最终解释权归图书馆所有\n\n优胜奖励：\n奖金250￥+图书馆状元/榜眼/探花认证+文章页/首页推荐\n\n详情请至活动页\nalhs.fun/index.php/huodong/",
@@ -111,7 +107,12 @@ info = JSON.parse(`{
     ],
     "title": "艾利浩斯图书馆传送位点站"
 }
-`)
+
+console.log(info);
+
+addEventListener("fetch", event => {
+	event.respondWith(handleRequest(event.request))
+})
 
 async function handleRequest(request) {
 	const init = {
@@ -130,7 +131,7 @@ async function handleRequest(request) {
 	</head>
 	
 	<body>
-        <script>var INFO=JSON.parse(\`${JSON.stringify(info)}\`);var ROOT="${root}"</script>
+        <script>var info=${JSON.stringify(info)};var root='${root}'</script>
 		<div id="wrap">
 			<div id="content"><img src="${root}/192.png">
 				<div id="inner_wrap" class="hide">

@@ -41,16 +41,15 @@ img.onload = function () {
 	$('body').prepend(img);
 };
 if (IsPC()) {
-	img.src = `${ROOT}/BG.jpg`;
+	img.src = `${root}/BG.jpg`;
 } else {
-	img.src = `${ROOT}/BG_mb.jpg`;
+	img.src = `${root}/BG_mb.jpg`;
 	document.body.setAttribute('class', 'mobile');
 }
 $(document).ready(function () {
 	$('#black').click(function () {
 		$('#black').attr('class', 'hide');
 	});
-	var info = JSON.parse(INFO);
 	$('.title').text(info.title);
 	[ 'dom', 'int', 'cdn'].forEach(t => {
 		var desc = {
