@@ -240,15 +240,16 @@ body.mobile #codedesc {
 
 #code {
 	color: white;
-	line-height: 75px;
-	height: 75px;
-	font-size: 150%;
+	line-height: 63px;
+	height: 63px;
+	font-size: 125%;
+	font-weight: bold;
 }
 
 body.mobile #code {
-	line-height: 150px;
-	font-size: 3rem;
-	height: 150px;
+	line-height: 125px;
+	font-size: 2.5rem;
+	height: 125px;
 }
 
 #board {
