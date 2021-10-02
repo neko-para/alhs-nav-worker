@@ -71,12 +71,8 @@ $(document).ready(function () {
 				lnk.text(lk.name);
 			} else {
 				var sp = lk.name.split('\n');
-				lnk.text(sp[0]);
-				lnk.hover(function () {
-					lnk.text(sp[1]);
-				}, function () {
-					lnk.text(sp[0]);
-				})
+				lnk.html(sp[0] + '<br>' + sp[1])
+				lnk.addClass('multiline')
 			}
 		} else {
 			lnk.text(lk.name.replace('\n', ' '));

@@ -205,6 +205,10 @@ body.mobile #link {
 	transition: background-color 0.5s;
 }
 
+#link > a.multiline {
+	line-height: 25px;
+}
+
 body.mobile #link > a {
 	width: 600px;
 	height: 100px;
@@ -212,6 +216,10 @@ body.mobile #link > a {
 	font-size: 2rem;
 	border-right-width: 0px;
 	border-bottom-width: 1px;
+}
+
+body.mobile #link > a.multiline {
+	line-height: 50px;
 }
 
 #link > a:last-of-type {
